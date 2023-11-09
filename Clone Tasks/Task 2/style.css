@@ -1,0 +1,170 @@
+/* Set default styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Set styles for the body element */
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+}
+
+/* Set styles for the navigation bar */
+nav {
+  display: flex;
+  width: 100%;
+  background: rgb(54, 153, 214);
+  position: relative;
+  justify-content: space-between;
+  text-align: center;
+  padding: 15px 30px;
+  margin-bottom: 20px;
+}
+
+/* Set styles for the navigation bar icons */
+nav .icon {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffff;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Set styles for the navigation bar list */
+nav ol {
+  display: flex;
+  list-style: none;
+  margin: auto 0;
+}
+
+/* Set styles for the navigation bar list items */
+nav ol li {
+  margin: 0 2px;
+}
+
+/* Set styles for the navigation bar links */
+nav ol li a {
+  color: aliceblue;
+  font-size: 14px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+}
+
+/* Set styles for the search box */
+nav .Search_box {
+  display: flex;
+  margin: 10px;
+  height: 30px;
+  width: 10px;
+  line-height: 30px;
+}
+
+/* Set styles for the main content */
+main {
+  display: flex;
+  margin: 0 50px;
+}
+
+/* Set styles for the sections in the main content */
+main > section {
+  flex: 1;
+}
+
+/* Set styles for the articles in the main content */
+main > article {
+  flex: 1;
+}
+
+/* Set styles for images */
+img {
+  width: 100%;
+}
+
+/* Set styles for the container */
+.container {
+  background-color: white;
+  margin: 20px;
+}
+
+/* Set styles for the container's child elements */
+.container > div {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 10px;
+}
+
+/* Set styles for the container's heading */
+.container h1 {
+  width: 100%;
+}
+
+/* Set styles for the container's paragraphs */
+.container p {
+  height: 100px;
+}
+
+/* Set styles for buttons within the container */
+.container button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: cyan;
+  color: white;
+}
+
+/* Set styles for the articles */
+article {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+/* Set responsive styles for screens up to 1279px */
+@media screen and (max-width: 1279px) {
+  main > section {
+    flex: 2;
+  }
+
+  main > article {
+    flex: 1;
+  }
+
+  article {
+    grid-template-columns: 100%;
+  }
+}
+
+/* Set responsive styles for screens up to 800px */
+@media screen and (max-width: 800px) {
+  .Search_box > input {
+    display: none;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  main > section {
+    flex: none;
+  }
+
+  main > article {
+    flex: none;
+  }
+
+  article {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+/* Set responsive styles for screens up to 480px */
+@media screen and (max-width: 480px) {
+  .container p {
+  }
+}

@@ -1,0 +1,51 @@
+/* Set the font family, margin, and padding for the body */
+body {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the footer with text alignment, padding, background color, and text color */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+/* Set the maximum width for images to 100% and auto adjust the height */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media query for screens with a maximum width of 480px */
+@media screen and (max-width: 480px) {
+  /* Set the width of the picture element to 100% */
+  picture {
+    width: 100%;
+  }
+}
+
+/* Media query for screens with a minimum width of 481px and a maximum width of 800px */
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  /* Set the width of the picture element to 50% and float it to the left */
+  picture {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* Media query for screens with a minimum width of 801px */
+@media screen and (min-width: 801px) {
+  /* Set the width of the picture element to 33.33%, float it to the left, and display the images in a row */
+  picture {
+    width: calc(33.33%);
+    float: left;
+  }
+  /* Display the images in a row using flexbox */
+  img {
+    display: flex;
+    flex-direction: row;
+  }
+}

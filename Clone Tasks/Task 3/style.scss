@@ -1,0 +1,142 @@
+$base: #8ccff7;
+$color1: #4e89ae;
+$color2: #43658b;
+$color3: #ed6663;
+$color4: #ffa372;
+$colorhover: #444;
+
+/* Centering mixin */
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Reset CSS */
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Media Queries for Sizing image */
+@mixin box-sizing {
+  @media screen and (max-width: 800px) {
+    div {
+      width: 300px;
+      height: 300px;
+      background-image: url(https://via.placeholder.com/300);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    div {
+      width: 200px;
+      height: 200px;
+      background-image: url(https://via.placeholder.com/200);
+    }
+  }
+}
+
+/* mixin for circle orientation */
+@mixin circle-orientation {
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
+/* Css for header */
+header {
+  width: 100%;
+  background-color: $base;
+
+  @include center-flex();
+
+  div {
+    width: 400px;
+    height: 400px;
+    background-image: url(https://via.placeholder.com/400);
+  }
+
+  @include box-sizing();
+}
+
+/* Css for Rectangles */
+#rectangles {
+  width: 100%;
+  height: 300px;
+
+  @include center-flex();
+  flex-direction: column;
+
+  div {
+    width: 100%;
+    height: 50px;
+  }
+
+  .rectangle1 {
+    background-color: $color1;
+  }
+
+  .rectangle2 {
+    background-color: $color2;
+  }
+
+  .rectangle3 {
+    background-color: $color3;
+  }
+
+  .rectangle4 {
+    background-color: $color4;
+  }
+}
+
+/* Css for Circles */
+#circles {
+  width: 100%;
+
+  @include center-flex();
+  gap: 10px;
+  @include circle-orientation();
+
+  .circle1 {
+    background-color: $color1;
+    border-radius: 70px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .circle2 {
+    background-color: $color2;
+    border-radius: 80px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .circle3 {
+    background-color: $color3;
+    border-radius: 90px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .circle4 {
+    background-color: $color4;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* CSS For hover effect */
+.hover:hover {
+  background-color: $colorhover !important;
+}
+
+/* footer css */
+footer {
+  margin-top: 50px;
+  height: 50px;
+  background-color: $base;
+}
